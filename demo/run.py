@@ -1,6 +1,6 @@
 from framework.engine import Engine
 
-from .sudoku_board_gui import SudokuBoardGUI
+from .app import SudokuApp
 
 def run():
     """
@@ -8,7 +8,7 @@ def run():
     """
     # XXX: each refering to each other
     engine = Engine()
-    gui = SudokuBoardGUI(engine)
+    gui = SudokuApp(engine)
     engine.start = gui.start
     engine.update = gui.update
     engine.run()
